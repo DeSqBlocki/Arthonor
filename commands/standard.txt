@@ -1,0 +1,12 @@
+module.exports = {
+    slash: false,   
+    cooldown: '',
+    description: '',
+    expectedArgs: '',
+    minArgs: 0,
+    maxArgs: 0,
+    category: '',
+    callback: ({ message }) => {
+        
+    }
+}
