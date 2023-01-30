@@ -173,7 +173,26 @@ client.on('ready', async () => {
         }
         restartWGETimer()
 
-
+        function freitag() {
+            let now = new Date()
+            let isFriday = 5
+            if (now.getDay() == isFriday) {
+                let guild = client.guilds.cache.get(guildID)
+	            const botSpam = guild.channels.cache.get("461599623635664897")
+              botSpam.send({
+                content: "Es ist Freitag!",
+                files: [{
+                  attachment: "https://cdn.discordapp.com/attachments/871891995252125707/1068565760890376302/ssstwitter.com_1674836130121.mp4",
+                  name: 'friday.mp4',
+                  description: 'Es ist Freitag!'
+                }]
+              })
+            }
+          }
+          setTimeout(() => {
+            freitag()
+          }, 28800000); // 8h
+          
     })
 
     client.user.setActivity("Red Dead Depression", {
